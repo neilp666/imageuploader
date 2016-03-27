@@ -1,0 +1,12 @@
+<div class="container" style="width: 250px">
+  <%= form_for @post, html: { multipart: true } do |p| %>
+    <%= p.label :content %>
+    <%= p.text_field :content, class: "form-control" %>
+    <br>
+    <%= p.label :pictures %>
+    <%= file_field_tag "pictures[]", type: :file, multiple: true, class: "form-control"  %>
+    <br>
+    <%= p.submit "Submit", class: "btn btn-primary" %> 
+
+  <% end %>
+</div>

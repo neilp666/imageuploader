@@ -1,0 +1,8 @@
+<h1><%= @post.id %></h1>
+
+<h3>Content</h3>
+<p><%= @post.content %></p>
+
+<% @post.pictures.each do |picture|  %>
+  <%=  image_tag(picture.image.large) %>
+<% end %>
